@@ -24,11 +24,15 @@ Route::get('movements/{id}',function ($id){
     return $Mov;
 });
 
-Route::get('movements/{desc}',function ($desc){
-    return App\Movement::where('description', $desc)->all();
+Route::get('id/{desc}',function ($desc){
+    return App\Movement::where('description', $desc)->get();
 
 });
 
+Route::get('fecha/{fecha}',function ($fecha){
+    return App\Movement::where('movement_date', $fecha)->get();
+
+});
 
 Auth::routes();
 
