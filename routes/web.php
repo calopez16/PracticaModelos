@@ -24,6 +24,12 @@ Route::get('movements/{id}',function ($id){
     return $Mov;
 });
 
+Route::get('movements/{desc}',function ($desc){
+    return App\Movement::where('description', $desc)->all();
+
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
