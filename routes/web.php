@@ -15,11 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/movements', function () {
+Route::get('movements', function () {
     return DB::table('movements')->get();
 });
 
-Route::get('/{id}',function ($id){
+Route::get('movements/{id}',function ($id){
     $usuarios = App\User::find($id);
     return $usuarios;
 });
