@@ -20,8 +20,8 @@ Route::get('movements', function () {
 });
 
 Route::get('movements/{id}',function ($id){
-    $usuarios = App\User::find($id);
-    return $usuarios;
+    $Mov = App\Movement::find($id);
+    return $Mov;
 });
 
 Auth::routes();
