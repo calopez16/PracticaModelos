@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/movements', function () {
+    return DB::table('movements')->get();
+});
+
+Route::get('/{id}',function ($id){
+    $usuarios = App\User::find($id);
+    return $usuarios;
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
