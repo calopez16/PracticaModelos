@@ -19,12 +19,12 @@ Route::get('movements', function () {
     return DB::table('movements')->get();
 });
 
-Route::get('movements/{id}',function ($id){
+Route::get('id/{id}',function ($id){
     $Mov = App\Movement::find($id);
     return $Mov;
 });
 
-Route::get('id/{desc}',function ($desc){
+Route::get('Desc/{desc}',function ($desc){
     return App\Movement::where('description', $desc)->get();
 
 });
