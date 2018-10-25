@@ -30,9 +30,12 @@ Route::get('Desc/{desc}',function ($desc){
 });
 
 Route::get('fecha/{fecha}',function ($fecha){
+
+
+
     return App\Movement::where('movement_date', $fecha)->get();
 
-})->where(['fecha' => 'yyyy/mm/dd'])->view('home');
+})->where(['fecha' => '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$'])->view('home');
 
 Auth::routes();
 
