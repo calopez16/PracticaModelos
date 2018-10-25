@@ -32,7 +32,7 @@ Route::get('Desc/{desc}',function ($desc){
 Route::get('fecha/{fecha}',function ($fecha){
     return App\Movement::where('movement_date', $fecha)->get();
 
-})->view('welcome');
+})->where(['fecha' => 'yyyy/mm/dd'])->view('home');
 
 Auth::routes();
 
