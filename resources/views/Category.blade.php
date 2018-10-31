@@ -10,11 +10,16 @@
 
 </header>
 <body>
-    {{$categorys=App\Category::all()}}
+<h1>Categorys</h1>
+
+
+    <!-- {{$categorys=App\Category::all()}}
 
     @foreach ($categorys as $category)
         <p>This is user {{ $category->id }}</p>
-    @endforeach
+    @endforeach -->
+
+    
 </body>
 
 
