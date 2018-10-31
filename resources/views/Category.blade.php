@@ -13,9 +13,9 @@
 <h1>Categorys</h1>
 
 
-    {{$categorys=App\Category::all()}}
+    <!-- {{$categorys=App\Category::all()}} -->
 
-    @foreach ($categorys as $category)
+    @foreach ({{$categorys=App\Category::all()}} as $category)
         <p>This is user {{ $category->id }}</p>
     @endforeach
 
