@@ -34,7 +34,7 @@ Route::get('fecha/{fecha}',function ($fecha){
 
 return App\Movement::where('movement_date', $fecha)->get();
 
-})->where(['fecha','^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$'])->view('home');
+})->where(['fecha'=>'^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$'])->view('home');
 
 
 Auth::routes();
