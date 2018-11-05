@@ -31,10 +31,9 @@ Route::get('Desc/{desc}',function ($desc){
 
 Route::get('fecha/{fecha}',function ($fecha){
 
+$Movements=App\Movement::where('movement_date', $fecha)->get();
 
-return App\Movement::where('movement_date', $fecha)->get();
-
-})->where(var_dump(validateDate('2012-02-28', 'Y-m-d'))==true)->view('home');
+});
 
 
 Auth::routes();
