@@ -1,8 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Pagina de Movements</h1>
-<p>Tienes mas de 18 a egg!</p>
-
-
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
+                    <h1>Tienes mas de 18!</h1>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
