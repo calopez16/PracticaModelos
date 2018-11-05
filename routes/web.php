@@ -37,7 +37,7 @@ $Movements=App\Movement::where('movement_date', $fecha)->get();
 
 Route::get('Aver',function (){
     
-    return view("Movements");
+    return view("home");
 
 })->middleware('CheckAge');
 
