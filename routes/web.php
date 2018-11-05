@@ -39,5 +39,5 @@ $Movements=App\Movement::where('movement_date', $fecha)->get();
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/Movements','Movements@index');
+Route::get('/Movements','MovementController@index');
 Route::get('/Category','CategoryController@index');
