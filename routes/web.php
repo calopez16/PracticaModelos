@@ -39,7 +39,7 @@ Route::get('Aver',function (){
     
     return view("home");
 
-})->middleware('CheckAge');
+})->middleware('CheckAge','auth');
 
 
 Auth::routes();
