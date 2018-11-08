@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-
+@section('content')
 <h1>Categorys</h1>
 
 
@@ -12,8 +12,4 @@
     @endforeach
 
     
-</body>
-
-
-
-</html>
+@endsection
